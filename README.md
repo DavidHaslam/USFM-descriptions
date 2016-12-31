@@ -4,7 +4,7 @@ A tab delimited text file containing a descriptions lookup table for all **USFM*
 
 I developed this as an external replacement file for use in a bespoke **TextPipe** filter to analyse _USFM tag statistics_.
 
-Column 1 contains the SFM tags each wrapped inside \Q ... \E for use with PCRE matching.
+Column 1 contains the SFM tags each wrapped inside \Q ... \E for use with **PCRE** matching.
 
 Column 2 contains the description of each SFM tag, distilled from the **Unified Standard Format Markers** _User Reference_.
 
