@@ -18,4 +18,6 @@ It currently matches **USFM 2.4** and will eventually be updated to match **USFM
 
 I've been using TextPipe since 2001. A copy of my bespoke filters may be requested by email.
 
-David Haslam 2016-12-31
+dfh@crosswire.org
+
+David Haslam 2016-01-01
