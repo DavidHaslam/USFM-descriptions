@@ -12,7 +12,7 @@ For **USFM** see http://paratext.org/usfm
 
 For **PCRE** see https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions
 
-It currently matches **USFM 2.4** and will eventually be updated to match **USFM 3.0**
+It currently matches **USFM 3.0**rc1
 
 **TextPipe Standard** is available from http://www.datamystic.com/textpipe/standard.html
 
@@ -20,4 +20,4 @@ I've been using TextPipe since 2001. A copy of my bespoke filters may be request
 
 dfh@crosswire.org
 
-David Haslam 2016-01-01
+David Haslam 2016-01-03
