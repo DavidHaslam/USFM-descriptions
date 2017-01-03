@@ -1,0 +1,196 @@
+TextPipe Single User Edition 10.0.6
+Purchased by: David Haslam, David Haslam
+
+Filter Title: C:\Users\David\TextPipe Filters\USFM tag statistics.fll
+
+Filter List
+-----------
+Filter options
+|  [X] Log to file
+|  [X] Append to logfile
+|  Log filename: textpipe.log
+|  Threshold 500
+|  [ ] Log comment filters
+|
+|--Input from file(s)
+|     [ ] Confirm before processing each file
+|     [ ] Confirm before processing read/only files
+|     [ ] Delete input files after processing
+|     [ ] Process inside compressed files
+|     Confirm each binary file
+|       Sample size 100 characters
+|   
+|--Comment...
+|  |  USFM tag statistics
+|  |  
+|  |  Outputs a 'count duplicate lines' list for the SFM tags.
+|  |  
+|  |  Start and close tags in a tag pair are listed separately.
+|  |  
+|  |   Excludes + and similar parameters used in footnotes & cross-references 
+|  |   Excludes optional line break // and ~
+|  |   Excludes delimiters | within \fig ...\fig*
+|  |  
+|  |  Filter improved to catch all the tags
+|  |  Filter enhanced to add tag descriptions
+|  |  Filter improved to include nested tags with \+
+|  |
+|  |--Comment...
+|  |  |  Workaround for unseparated tag groups
+|  |  |  
+|  |  |   e.g. \global\cnum=14\relax
+|  |  |        \null\null\eject
+|  |  |
+|  |  +--Perl pattern [(\w|\d)(\\)(\w)] with [$1 $2$$3]
+|  |        [X] Match case
+|  |        [ ] Whole words only
+|  |        [ ] Case sensitive replace
+|  |        [ ] Prompt on replace
+|  |        [ ] Skip prompt if identical
+|  |        [ ] First only
+|  |        [ ] Extract matches|  |        Maximum text buffer size 4096
+|  |        [ ] Maximum match (greedy)
+|  |        [ ] Allow comments
+|  |        [ ] '.' matches newline
+|  |        [X] UTF-8 Support
+
+|  |        [ ] Process longest strings first
+|  |        [ ] Simultaneous search
+|  |        [ ] Log summary only
+
+|  |      Further search/replace list phrases (CSV format):
+|  |      >, >
+|  |      
+|  |--Comment...
+|  |  |  Extract tags
+|  |  |  
+|  |  |   NB. Does it now catch \cnum=## ?
+|  |  |
+|  |  +--Perl pattern [\\(\w+|\+\w+)(\s|\*|=\d+)] with [\\$1$$2\r\n]
+|  |        [X] Match case
+|  |        [ ] Whole words only
+|  |        [ ] Case sensitive replace
+|  |        [ ] Prompt on replace
+|  |        [ ] Skip prompt if identical
+|  |        [ ] First only
+|  |        [X] Extract matches|  |        Maximum text buffer size 4096
+|  |        [ ] Maximum match (greedy)
+|  |        [ ] Allow comments
+|  |        [ ] '.' matches newline
+|  |        [X] UTF-8 Support
+|  |      
+|  |--Comment...
+|  |  |  Remove blanks
+|  |  |
+|  |  |--Remove blanks from End of Line
+|  |  |   
+|  |  +--Remove blank lines
+|  |      
+|  |--Comment...
+|  |  |  Counted list of tags
+|  |  |
+|  |  |--Count duplicate lines
+|  |  |     [ ] Ignore case
+|  |  |     Start column 1
+|  |  |     Length 15
+|  |  |     [X] Include One
+|  |  |     format: %5.5d\t%s
+|  |  |   
+|  |  +--Add file header [Count\tSFM tag]
+|  |      
+|  |--Comment...
+|  |  |  Add tag descriptions +
+|  |  |  
+|  |  |     From USFM Reference version 2.35
+|  |  |  
+|  |  |   + The replacement table is incomplete
+|  |  |     Tags that can have numbers may need further entries
+|  |  |     Excludes: Peripherals & Study Bible Content
+|  |  |     
+|  |  |     Of these possibilities to name tag pairs
+|  |  |       begin ... end     (story  metaphor) 
+|  |  |       open  ... close   (gate   metaphor)
+|  |  |       start ... finish  (race   metaphor)
+|  |  |       start ... stop    (action metaphor)
+|  |  |     I have chosen the first convention.
+|  |  |     The USFM Reference is not 100% consistent.
+|  |  |
+|  |  |--Copy fields:-0 .. -0 copy to 3
+|  |  |     Delimiter type: 1
+|  |  |     Custom delimiter: 
+|  |  |     Text qualifier : 0
+|  |  |     Custom qualifier: "
+|  |  |     [ ] Has Header
+|  |  |   
+|  |  +--Restrict fields:-0 .. -0
+|  |     |  [ ] Process fields individually
+|  |     |    [X] Exclude delimiter
+|  |     |      [ ] Exclude quotes (if present)
+|  |     |  Delimiter type: 1
+|  |     |  Custom delimiter: 
+|  |     |  Text qualifier : 0
+|  |     |  Custom qualifier: "
+|  |     |  [ ] Has Header
+|  |     |
+|  |     +--Replace list: C:\Users\David\TextPipe Filters\USFM tag descriptions.tab Perl pattern
+|  |           [X] Match case
+|  |           [X] Whole words only
+|  |           [ ] Case sensitive replace
+|  |           [ ] Prompt on replace
+|  |           [ ] Skip prompt if identical
+|  |           [ ] First only
+|  |           [ ] Extract matches|  |           Maximum text buffer size 4096
+|  |           [ ] Maximum match (greedy)
+|  |           [ ] Allow comments
+|  |           [ ] '.' matches newline
+|  |           [X] UTF-8 Support
+
+|  |           [X] Process longest strings first
+|  |           [ ] Simultaneous search
+|  |           [ ] Log summary only
+|  |         
+|  +--Comment...
+|     |  Invalid tag descriptions
+|     |  
+|     |   - descriptions ending with an asterix are invalid
+|     |     because the asterisk should have been replaced
+|     |
+|     +--Restrict fields:3 .. +1
+|        |  [ ] Process fields individually
+|        |    [ ] Exclude delimiter
+|        |      [ ] Exclude quotes (if present)
+|        |  Delimiter type: 1
+|        |  Custom delimiter: 
+|        |  Text qualifier : 0
+|        |  Custom qualifier: "
+|        |  [ ] Has Header
+|        |
+|        +--Perl pattern [(.+)\*] with [### SYNTAX ERROR ###]
+|              [X] Match case
+|              [ ] Whole words only
+|              [ ] Case sensitive replace
+|              [ ] Prompt on replace
+|              [ ] Skip prompt if identical
+|              [ ] First only
+|              [ ] Extract matches|              Maximum text buffer size 4096
+|              [X] Maximum match (greedy)
+|              [ ] Allow comments
+|              [ ] '.' matches newline
+|              [X] UTF-8 Support
+
+|              [ ] Process longest strings first
+|              [ ] Simultaneous search
+|              [ ] Log summary only
+|            
++--Output to file(s)
+      [ ] Only update date on changed files
+      [ ] Append mode
+      [X] Change extension to: @inputExtension.tags.count.txt
+      [X] Open output file
+      Only output modified files
+      Output folder: @inputPath\Tags\
+      [ ] Maintain folder structure
+      [ ] Remove empty output files    
+
+Files List
+----------
