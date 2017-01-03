@@ -1,9 +1,9 @@
-SFM tag	Description
---------	-----------
+SFM tag	Description (updated for USFM 3.0)
+-------	----------------------------------
+\Q\*\E	Terminates quotation start/end milestone attributes (USFM 3.0)
+
 \Q\+add\E	Translator's added words begin (nested)
 \Q\+add*\E	Translator's added words end   (nested)
-\Q\+addpn\E	Chinese words to be dot underline & underline begin (nested)
-\Q\+addpn*\E	Chinese words to be dot underline & underline end   (nested)
 \Q\+bd\E	Bold text style begin (nested)
 \Q\+bd*\E	Bold text style end   (nested)
 \Q\+bdit\E	Bold italic text style begin (nested)
@@ -20,6 +20,8 @@ SFM tag	Description
 \Q\+iqt*\E	Introduction quoted text end   (nested)
 \Q\+it\E	Italics text style begin (nested)
 \Q\+it*\E	Italics text style end   (nested)
+\Q\+jmp\E	Link text begin (USFM 3.0) (nested)
+\Q\+jmp*\E	Link text end   (USFM 3.0) (nested)
 \Q\+k\E	Keyword / keyterm begin (nested)
 \Q\+k*\E	Keyword / keyterm end   (nested)
 \Q\+nd\E	Name of deity begin (nested)
@@ -32,16 +34,22 @@ SFM tag	Description
 \Q\+ord*\E	Ordinal number ending end   (nested)
 \Q\+pn\E	Proper name begin (nested)
 \Q\+pn*\E	Proper name end   (nested)
-\Q\+pro\E	Pronunciation information for CJK begin (nested)
-\Q\+pro*\E	Pronunciation information for CJK end   (nested)
+\Q\+png\E	Geographic proper name begin (USFM 3.0) (nested)
+\Q\+png*\E	Geographic proper name end   (USFM 3.0) (nested)
+\Q\+pro\E	Pronunciation information for CJK begin (deprecated in USFM 3.0) (nested)
+\Q\+pro*\E	Pronunciation information for CJK end   (deprecated in USFM 3.0) (nested)
 \Q\+qac\E	Acrostic letter mark begin (nested)
 \Q\+qac*\E	Acrostic letter mark end   (nested)
 \Q\+qs\E	Selah (in poetry) begin (nested)
 \Q\+qs*\E	Selah (in poetry) end   (nested)
 \Q\+qt\E	Quoted text begin (nested)
 \Q\+qt*\E	Quoted text end   (nested)
+\Q\+rb\E	Ruby annotated base text begin (optional if for single ideogram) (USFM 3.0) (nested)
+\Q\+rb*\E	Ruby annotated base text end   (optional if for single ideogram) (USFM 3.0) (nested)
 \Q\+rq\E	Inline quotation reference(s) begin (nested)
 \Q\+rq*\E	Inline quotation reference(s) end   (nested)
+\Q\+rt\E	Ruby annotated text begin (USFM 3.0) (nested)
+\Q\+rt*\E	Ruby annotated text end   (USFM 3.0) (nested)
 \Q\+sc\E	Small-cap text begin (nested)
 \Q\+sc*\E	Small-cap text end   (nested)
 \Q\+sig\E	Signature of the author of an epistle begin (nested)
@@ -52,21 +60,28 @@ SFM tag	Description
 \Q\+tl*\E	Transliterated (or foreign) word[s] end   (nested)
 \Q\+w\E	Word list/glossary/dictionary entry begin (nested)
 \Q\+w*\E	Word list/glossary/dictionary entry end   (nested) (excludes visible marker)
+\Q\+wa\E	Aramaic word list entry begin (USFM 3.0) (nested)
+\Q\+wa*\E	Aramaic word list entry end (excludes visible marker) (USFM 3.0) (nested)
 \Q\+wg\E	Greek word list entry begin (nested)
 \Q\+wg*\E	Greek word list entry end   (nested) (excludes visible marker)
 \Q\+wh\E	Hebrew word list entry begin (nested)
 \Q\+wh*\E	Hebrew word list entry end   (nested) (excludes visible marker)
 \Q\+wj\E	Words of Jesus begin (nested)
 \Q\+wj*\E	Words of Jesus end   (nested)
+\Q\+xop\E	Published cross reference "origin" reference begin          (USFM 3.0) (nested)
+\Q\+xop*\E	Published cross reference "origin" reference end (explicit) (USFM 3.0) (nested)
+\Q\+xta\E	Cross reference "target" reference[s] added/extra text begin          (USFM 3.0) (nested)
+\Q\+xta*\E	Cross reference "target" reference[s] added/extra text end (explicit) (USFM 3.0) (nested)
+
 \Q\add\E	Translator's added words begin
 \Q\add*\E	Translator's added words end
-\Q\addpn\E	Chinese words to be dot underline & underline begin
-\Q\addpn*\E	Chinese words to be dot underline & underline end
+\Q\addpn\E	Translator's added words in a proper name begin (deprecated)
+\Q\addpn*\E	Translator's added words in a proper name end   (deprecated)
 \Q\b\E	Blank line in poetry (e.g. between stanzas)
 \Q\bd\E	Bold text style begin
-\Q\bd*\E	Bold text style end  
+\Q\bd*\E	Bold text style end
 \Q\bdit\E	Bold italic text style begin
-\Q\bdit*\E	Bold italic text style end  
+\Q\bdit*\E	Bold italic text style end
 \Q\bk\E	Quoted book title begin
 \Q\bk*\E	Quoted book title end
 \Q\c\E	Chapter
@@ -84,15 +99,15 @@ SFM tag	Description
 \Q\ef\E	Extended footnote begin (Study Bibles)
 \Q\ef*\E	Extended footnote end   (Study Bibles)
 \Q\em\E	Emphasis text begin
-\Q\em*\E	Emphasis text end  
+\Q\em*\E	Emphasis text end
 \Q\esb\E	Sidebar content section begin (Study Bibles)
 \Q\esbe\E	Sidebar content section end   (Study Bibles)
 \Q\ex\E	Extended cross reference element begin (Study Bibles)
 \Q\ex*\E	Extended cross reference element end   (Study Bibles)
 \Q\f\E	Footnote element begin
 \Q\f*\E	Footnote element end
-\Q\fdc\E	Footnote element begin (Bibles with deuterocanonical books)
-\Q\fdc*\E	Footnote element end   (Bibles with deuterocanonical books)
+\Q\fdc\E	Footnote element begin (Bibles with deuterocanonical books) (deprecated in USFM 3.0)
+\Q\fdc*\E	Footnote element end   (Bibles with deuterocanonical books) (deprecated in USFM 3.0)
 \Q\fe\E	Endnote element begin
 \Q\fe*\E	Endnote element end
 \Q\fig\E	Figure element begin
@@ -116,33 +131,33 @@ SFM tag	Description
 \Q\ftc*\E	Critical footnote text end (explicit)
 \Q\fv\E	Footnote verse number begin
 \Q\fv*\E	Footnote verse number end
-\Q\h\E	Running header
-\Q\h1\E	Running header (level 1)
-\Q\h2\E	Running header (level 2)
-\Q\h3\E	Running header (level 3)
-\Q\h4\E	Running header (level 4)
+\Q\h\E	Running header (h=h1)
+\Q\h1\E	Running header (level 1) (deprecated in USFM 3.0)
+\Q\h2\E	Running header (level 2) (deprecated in USFM 3.0)
+\Q\h3\E	Running header (level 3) (deprecated in USFM 3.0)
+\Q\h4\E	Running header (level 4) (deprecated in USFM 3.0)
 \Q\ib\E	Introduction blank line (was introduction begin?)
 \Q\id\E	Identification
 \Q\ide\E	Character encoding specification (optional)
 \Q\ie\E	Introduction end (optional)
 \Q\iex\E	Introduction explanatory or bridge text
-\Q\ili\E	Introduction list item
+\Q\ili\E	Introduction list item (ili=ili1)
 \Q\ili1\E	Introduction list item (level 1)
 \Q\ili2\E	Introduction list item (level 2)
 \Q\ili3\E	Introduction list item (level 3) unlikely!
 \Q\im\E	Introduction flush left (margin) paragraph
 \Q\imi\E	Introduction flush left (indented) paragraph
 \Q\imq\E	Introduction flush left (margin) quote from text paragraph
-\Q\imt\E	Introduction major title
+\Q\imt\E	Introduction major title (imt=imt1)
 \Q\imt1\E	Introduction major title (level 1)
 \Q\imt2\E	Introduction major title (level 2)
 \Q\imt3\E	Introduction major title (level 3)
 \Q\imt4\E	Introduction major title (level 4)
-\Q\imte\E	Introduction major title ending
+\Q\imte\E	Introduction major title ending (imte=imte1)
 \Q\imte1\E	Introduction major title ending (level 1)
 \Q\imte2\E	Introduction major title ending (level 2)
 \Q\imte3\E	Introduction major title ending (level 3) unlikely!
-\Q\io\E	Introduction outline entry
+\Q\io\E	Introduction outline entry (io=io1)
 \Q\io1\E	Introduction outline entry (level 1)
 \Q\io2\E	Introduction outline entry (level 2)
 \Q\io3\E	Introduction outline entry (level 3)
@@ -154,42 +169,60 @@ SFM tag	Description
 \Q\ipi\E	Introduction indented paragraph
 \Q\ipq\E	Introduction quote from text paragraph
 \Q\ipr\E	Introduction right-aligned paragraph
-\Q\iq\E	Introduction poetic line
+\Q\iq\E	Introduction poetic line (iq=iq1)
 \Q\iq1\E	Introduction poetic line (level 1)
 \Q\iq2\E	Introduction poetic line (level 2)
 \Q\iq3\E	Introduction poetic line (level 3)
 \Q\iq4\E	Introduction poetic line (level 4) unlikely!
 \Q\iqt\E	Introduction quoted text begin
 \Q\iqt*\E	Introduction quoted text end
-\Q\is\E	Introduction section heading
+\Q\is\E	Introduction section heading (is=is1)
 \Q\is1\E	Introduction section heading (level 1)
 \Q\is2\E	Introduction section heading (level 2)
 \Q\is3\E	Introduction section heading (level 3) unlikely!
 \Q\is4\E	Introduction section heading (level 4) unlikely!
 \Q\it\E	Italics text style begin
-\Q\it*\E	Italics text style end  
+\Q\it*\E	Italics text style end
+\Q\jmp\E	Link text begin (USFM 3.0)
+\Q\jmp*\E	Link text end   (USFM 3.0)
 \Q\k\E	Keyword / keyterm begin
 \Q\k*\E	Keyword / keyterm end
-\Q\li\E	List item
+\Q\lf\E	List footer (USFM 3.0)
+\Q\lh\E	List header (USFM 3.0)
+\Q\li\E	List item (li=li1)
 \Q\li1\E	List item (level 1)
 \Q\li2\E	List item (level 2)
 \Q\li3\E	List item (level 3)
 \Q\li4\E	List item (level 4)
-\Q\lit\E	Liturgical term
+\Q\lik\E	List entry "key" content begin (USFM 3.0)
+\Q\lik*\E	List entry "key" content end   (USFM 3.0)
+\Q\lim\E	Embedded list entry (lim=lim1) (USFM 3.0)
+\Q\lim1\E	Embedded list entry (level 1) (USFM 3.0)
+\Q\lim2\E	Embedded list entry (level 2) (USFM 3.0)
+\Q\lim3\E	Embedded list entry (level 3) (USFM 3.0)
+\Q\lit\E	Liturgical note/comment (used in e.g. Russian Synodal)
+\Q\litl\E	List entry total begin (USFM 3.0)
+\Q\litl*\E	List entry total end   (USFM 3.0)
+\Q\liv\E	List entry "value" content begin (liv=liv1) (USFM 3.0)
+\Q\liv*\E	List entry "value" content end   (liv=liv1) (USFM 3.0)
+\Q\liv1\E	List entry "value" content begin (level 1) (USFM 3.0)
+\Q\liv1*\E	List entry "value" content end   (level 1) (USFM 3.0)
+\Q\liv2\E	List entry "value" content begin (level 2) (USFM 3.0)
+\Q\liv2*\E	List entry "value" content end   (level 2) (USFM 3.0)
 \Q\m\E	Flush left (margin) paragraph
 \Q\mi\E	Indented flush left paragraph
 \Q\mr\E	Major section reference range
-\Q\ms\E	Major section
+\Q\ms\E	Major section (ms=ms1)
 \Q\ms1\E	Major section (level 1)
 \Q\ms2\E	Major section (level 2)
 \Q\ms3\E	Major section (level 3)
 \Q\ms4\E	Major section (level 4) unlikely!
-\Q\mt\E	Major title
+\Q\mt\E	Major title (mt=mt1)
 \Q\mt1\E	Major title (portion 1)
 \Q\mt2\E	Major title (portion 2)
 \Q\mt3\E	Major title (portion 3)
 \Q\mt4\E	Major title (portion 4)
-\Q\mte\E	Major title at ending
+\Q\mte\E	Major title at ending (mte=mte1)
 \Q\mte1\E	Major title at ending (portion 1)
 \Q\mte2\E	Major title at ending (portion 2)
 \Q\mte3\E	Major title at ending (portion 3) unlikely!
@@ -207,12 +240,12 @@ SFM tag	Description
 \Q\pb\E	Explicit page break
 \Q\pc\E	Centered paragraph
 \Q\periph\E	Peripherals marker (USFM 2.1 & later)
-\Q\ph\E	Indented paragraph with hanging indent
+\Q\ph\E	Indented paragraph with hanging indent (ph=ph1)
 \Q\ph1\E	Indented paragraph with hanging indent (level 1)
 \Q\ph2\E	Indented paragraph with hanging indent (level 2)
 \Q\ph3\E	Indented paragraph with hanging indent (level 3)
 \Q\ph4\E	Indented paragraph with hanging indent (level 4) unlikely!
-\Q\pi\E	Indented paragraph
+\Q\pi\E	Indented paragraph (pi=pi1)
 \Q\pi1\E	Indented paragraph (level 1)
 \Q\pi2\E	Indented paragraph (level 2)
 \Q\pi3\E	Indented paragraph (level 3)
@@ -223,9 +256,12 @@ SFM tag	Description
 \Q\pmr\E	Embedded text refrain
 \Q\pn\E	Proper name begin
 \Q\pn*\E	Proper name end
-\Q\pro\E	Pronunciation information for CJK begin
-\Q\pro*\E	Pronunciation information for CJK end
-\Q\q\E	Poetic line
+\Q\png\E	Geographic proper name begin (USFM 3.0)
+\Q\png*\E	Geographic proper name end   (USFM 3.0)
+\Q\po\E	Letter opening (USFM 3.0)
+\Q\pro\E	Pronunciation information for CJK begin (deprecated in USFM 3.0)
+\Q\pro*\E	Pronunciation information for CJK end   (deprecated in USFM 3.0)
+\Q\q\E	Poetic line (q=q1)
 \Q\q1\E	Poetic line (indent 1)
 \Q\q2\E	Poetic line (indent 2)
 \Q\q3\E	Poetic line (indent 3)
@@ -236,7 +272,8 @@ SFM tag	Description
 \Q\qac\E	Acrostic letter mark begin
 \Q\qac*\E	Acrostic letter mark end
 \Q\qc\E	Centered poetic line
-\Q\qm\E	Embedded text poetic line
+\Q\qd\E	Hebrew note (USFM 3.0)
+\Q\qm\E	Embedded text poetic line (qm=qm1)
 \Q\qm1\E	Embedded text poetic line (level 1)
 \Q\qm2\E	Embedded text poetic line (level 2)
 \Q\qm3\E	Embedded text poetic line (level 3)
@@ -246,23 +283,38 @@ SFM tag	Description
 \Q\qs*\E	Selah (in poetry) end
 \Q\qt\E	Quoted text begin
 \Q\qt*\E	Quoted text end
+\Q\qt-e\E	Quotation end   milestone (qt=qt1)  (USFM 3.0)
+\Q\qt-s\E	Quotation start milestone (qt=qt1)  (USFM 3.0)
+\Q\qt1-e\E	Quotation end   milestone (level 1) (USFM 3.0)
+\Q\qt1-s\E	Quotation start milestone (level 1) (USFM 3.0)
+\Q\qt2-e\E	Quotation end   milestone (level 2) (USFM 3.0)
+\Q\qt2-s\E	Quotation start milestone (level 2) (USFM 3.0)
 \Q\r\E	Parallel passage reference[s]
+\Q\rb\E	Ruby annotated base text begin (optional if for single ideogram) (USFM 3.0)
+\Q\rb*\E	Ruby annotated base text end   (optional if for single ideogram) (USFM 3.0)
 \Q\rem\E	Remark
+\Q\restore\E	Pseudo tag for ParaTExt backup system
 \Q\rq\E	Inline quotation reference(s) begin
 \Q\rq*\E	Inline quotation reference(s) end
-\Q\restore\E	Pseudo tag for Paratext backup system
-\Q\s\E	Section heading
+\Q\rt\E	Ruby annotated text begin (USFM 3.0)
+\Q\rt*\E	Ruby annotated text end   (USFM 3.0)
+\Q\s\E	Section heading (s=s1)
 \Q\s1\E	Section heading (level 1)
 \Q\s2\E	Section heading (level 2)
 \Q\s3\E	Section heading (level 3)
 \Q\s4\E	Section heading (level 4)
 \Q\sc\E	Small-cap text begin
-\Q\sc*\E	Small-cap text end  
+\Q\sc*\E	Small-cap text end
+\Q\sd\E	Semantic division (sd=sd1)  (semantic space) (USFM 3.0)
+\Q\sd1\E	Semantic division (level 1) (semantic space) (USFM 3.0)
+\Q\sd2\E	Semantic division (level 2) (semantic space) (USFM 3.0)
+\Q\sd3\E	Semantic division (level 3) (semantic space) (USFM 3.0)
+\Q\sd4\E	Semantic division (level 4) (semantic space) (USFM 3.0)
 \Q\sig\E	Signature of the author of an epistle begin
 \Q\sig*\E	Signature of the author of an epistle end
 \Q\sls\E	Secondary language or alternate text source begin
 \Q\sls*\E	Secondary language or alternate text source end
-\Q\sp\E	Speaker identification 
+\Q\sp\E	Speaker identification
 \Q\sr\E	Section reference range
 \Q\sts\E	Project text status tracking
 \Q\tc1\E	Table cell in column 1
@@ -303,6 +355,8 @@ SFM tag	Description
 \Q\vp*\E	Published verse character[s] end
 \Q\w\E	Word list/glossary/dictionary entry begin
 \Q\w*\E	Word list/glossary/dictionary entry end (excludes visible marker)
+\Q\wa\E	Aramaic word list entry begin (USFM 3.0)
+\Q\wa*\E	Aramaic word list entry end (excludes visible marker) (USFM 3.0)
 \Q\wg\E	Greek word list entry begin
 \Q\wg*\E	Greek word list entry end (excludes visible marker)
 \Q\wh\E	Hebrew word list entry begin
@@ -311,8 +365,8 @@ SFM tag	Description
 \Q\wj*\E	Words of Jesus end
 \Q\x\E	Cross reference element begin
 \Q\x*\E	Cross reference element end
-\Q\xdc\E	Cross reference "target" reference[s] (& text?) (DC editions) begin
-\Q\xdc*\E	Cross reference "target" reference[s] (& text?) (DC editions) end
+\Q\xdc\E	Cross reference "target" reference[s] (& text?) (DC editions) begin (deprecated in USFM 3.0)
+\Q\xdc*\E	Cross reference "target" reference[s] (& text?) (DC editions) end   (deprecated in USFM 3.0)
 \Q\xk\E	Cross reference keyword begin
 \Q\xk*\E	Cross reference keyword end (explicit)
 \Q\xnt\E	Cross reference "target" reference[s] (& text?) (NT editions) begin
@@ -321,19 +375,28 @@ SFM tag	Description
 \Q\xot*\E	Cross reference "target" reference[s] (& text?) (OT editions) end
 \Q\xo\E	Cross reference "origin" reference begin
 \Q\xo*\E	Cross reference "origin" reference end (explicit)
+\Q\xop\E	Published cross reference "origin" reference begin          (USFM 3.0)
+\Q\xop*\E	Published cross reference "origin" reference end (explicit) (USFM 3.0)
 \Q\xq\E	Cross reference quotation begin
 \Q\xq*\E	Cross reference quotation end (explicit)
-\Q\xt\E	Cross reference "target" reference[s] (& text?) begin
-\Q\xt*\E	Cross reference "target" reference[s] (& text?) end (explicit)
+\Q\xt\E	Cross reference "target" reference[s] begin
+\Q\xt*\E	Cross reference "target" reference[s] end (explicit)
+\Q\xta\E	Cross reference "target" reference[s] added/extra text begin          (USFM 3.0)
+\Q\xta*\E	Cross reference "target" reference[s] added/extra text end (explicit) (USFM 3.0)
 \Q\xtSee\E	Concordance and Names Index (alternate entry target reference) begin
 \Q\xtSee*\E	Concordance and Names Index (alternate entry target reference) end
 \Q\xtSeeAlso\E	Concordance and Names Index (additional entry target reference) begin
 \Q\xtSeeAlso*\E	Concordance and Names Index (additional entry target reference) end
-\Q\z\E	"Private use area" tags should begin with \z
+\Q\z\E	"Private use area" tags should begin with \z (e.g. \ztoc4 )
 	
 ;Notes	This table is incomplete!
+------  	-------------------------
 ;Hashes	Some tags that can have a numerical variable # may need further entries
 ;Excludes	Special markers for spacing and optional breaks ~ //
-;Excludes	Marking method specifier for cross-references & footnotes: + - ?
-;Excludes	Figure element parameter separator |
-;Excludes	Obsolete & deprecated tags or those no longer officially part of USFM
+;Excludes	Caller type for cross-references & footnotes: + - ?
+;Excludes	Chapter/verse separator to be used in cross-references & footnotes: ##SEP## (":", ".", etc.)
+;Excludes	Figure element parameter or attribute separator |
+;Excludes	Peripheral identifiers (USFM 3.0)
+;Excludes	Table column spanning syntax (USFM 3.0) (would require multiple entries)
+;Excludes	Word level attributes syntax and separator | (USFM 3.0)
+;Excludes	Obsolete & earlier deprecated tags (or those no longer officially part of USFM)
